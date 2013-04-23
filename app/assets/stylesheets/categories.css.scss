@@ -1,0 +1,37 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.categorytab {
+	width: 95%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+	padding: 0px;
+
+	ul {
+		margin: 0px;
+		padding: 0px;
+
+		.active {
+				border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+		}
+
+		li {
+			list-style: none;
+
+			line-height: 31px;
+
+			display: inline;
+			margin: 0px;
+			margin-top: 10px;
+			padding-right: 10px;
+			padding-left: 5px;
+			padding-bottom: 5px;
+
+			&:hover, .active {
+				border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+			}
+
+		}
+	}
+}

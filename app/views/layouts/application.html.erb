@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Staritup</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+
+<a id="simple-menu" href="#sidr"><%= image_tag 'icons/arrow.png', :class => 'toggle' %></a>
+ 
+<div id="sidr">
+
+  <div class="logo"><%= image_tag 'minilogoblanc.png' %></div>
+  <!-- User Box -->
+  <div class="userbox">
+    <% unless user_signed_in? %>
+      <%= link_to 'Sign In', "#login", :class => "openModal" %> <%= link_to 'Sign Up', "#register", :class => "openModal" %>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to current_user.email, user_path(current_user) %>
+      <%= link_to (image_tag 'icons/idea.png', :size => '9x12')+' Add a Project', user_path(current_user) %>
+    </br></br></br></br>
+      <% if current_user.website? %>
+        <%= link_to (image_tag 'icons/web.png', :size => '12x12'), 'http://'+current_user.website %>
+      <% end %>
+    <% end %>
+  </div>
+
+
+  <ul>
+    <li class="active"><a href="#">List 1</a></li>
+    <li class="active"><a href="#"><%= image_tag 'icons/brain.png', :size => '14x14' %> Trouver des réponses</a></li>
+    <% Category.all.each do |category| %>
+    <li><a href="#"><%= category.name %></a></li>
+    <% end %>
+    <li class="active"><a href="#">List 2</a></li>
+    <li><a href="#">List 3</a></li>
+  </ul>
+
+
+</div>
+
+<%= yield %>
+
+
+<aside id="register" class="modal">
+  <div>
+    <div class="explanation">
+      <p>One-click sign in if you've already connected your Facebook account, or quickly sign up for Twitch with Facebook</p>
+      <p>By clicking Sign Up, you are indicating that you have read and agree to the Terms of Service</p>
+    </div>
+    <form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post">  
+
+      <div id="forminput">
+        <div class="label">Name</div>
+        <div class="input">
+          <input autofocus="autofocus" id="user_name" name="user[name]" size="30" type="text" value="" />
+        </div>
+      </div>
+
+
+      <div id="forminput">
+        <div class="label">Username</div>
+        <div class="input">
+          <input autofocus="autofocus" id="user_username" name="user[username]" size="30" type="text" value="" />
+        </div>
+      </div>
+ 
+      <div id="forminput">
+        <div class="label">Email</div>
+        <div class="input">
+          <input autofocus="autofocus" id="user_email" name="user[email]" size="30" type="email" value="" />
+        </div>
+      </div>
+
+      <div id="forminput">
+        <div class="label">Password</div>
+        <div class="input">
+          <input id="user_password" name="user[password]" size="30" type="password" />
+        </div>
+      </div>
+
+      <div id="forminput">
+        <div class="label">Confirm Password</div>
+        <div class="input">
+          <input id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password" />
+        </div>
+      </div>
+
+      <input name="commit" type="submit" value="Sign up" class="inputbutton" />
+
+    </form>
+    <a href="#close" title="Close">Close</a>
+  </div>
+
+</aside>
+
+<aside id="login" class="modal">
+    <div>
+      <form accept-charset="UTF-8" action="/users/sign_in" class="new_user" id="new_user" method="post">
+        <div><label for="user_email">Email</label><br />
+        <input autofocus="autofocus" id="user_email" name="user[email]" size="30" type="email" value="" /></div>
+
+        <div><label for="user_password">Password</label><br />
+        <input id="user_password" name="user[password]" size="30" type="password" /></div>
+
+          <div><input name="user[remember_me]" type="hidden" value="0" /><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" /> <label for="user_remember_me">Remember me</label></div>
+
+        <div><input name="commit" type="submit" value="Sign in" /></div>
+      </form>
+      <a href="#close" title="Close">Close</a>
+    </div>
+</aside>
+ 
+<script>
+$(document).ready(function() {
+  $('#simple-menu').sidr();
+});
+</script>
+
+</body>
+</html>

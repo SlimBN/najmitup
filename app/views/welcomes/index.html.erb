@@ -1,0 +1,11 @@
+<header>
+  <% if user_signed_in? %>
+    <%= current_user.email %>
+  <% end %>
+
+  <% unless user_signed_in? %>
+    please <%= link_to "login", new_user_registration_path() %>
+  <% end %>
+</header>
+
+this is the home
