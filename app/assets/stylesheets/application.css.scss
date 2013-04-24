@@ -24,3 +24,184 @@
 
 
 }
+
+
+header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+
+	display: block;
+
+	min-width: 100%;
+	height: 60px;
+
+	background-color: white;
+	opacity: 0.9;
+
+	margin: 0px;
+	padding: 0 0 0 0;
+
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+	.logo {
+		display: inline-block;
+
+		margin: 0px;
+		padding: 0px;
+
+		margin-left: 30px;
+		margin-right: 40px;
+
+	}
+
+	.menu {
+		display: inline-block;
+
+		margin: 0px;
+		padding: 0px;
+
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+		a {
+			color: #000;
+
+			font-weight: bold;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+
+		ul {
+			margin: 0px;
+			padding: 0px;
+
+			li {
+				display: inline-block;
+
+				margin: 0px;
+				padding: 0px;
+
+				padding-right: 10px;
+				margin-left: 10px;
+
+				line-height: 60px;
+
+				border-right: 1px solid #eee;
+
+			}
+		}
+	}
+
+	.personal {
+		display: inline-block;
+
+		margin: 0px;
+		margin-left: 20px;
+
+		a {
+			color: #000;
+
+			font-weight: bold;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size: 14px;
+		}
+
+		ul {
+			li {
+				display: inline-block;
+
+				padding-right: 10px;
+
+				line-height: 60px;
+
+				border-right: 1px solid #eee;
+
+			}
+		}
+	}
+}
+
+#introquestionsmodule {
+	background-color: #fff;
+
+	margin: 0px;
+	padding: 20px;
+	display: block;
+
+	text-align: center;
+
+	.lastone {
+		display: inline-block;
+
+		text-align: left;
+
+		width: 400px;
+
+		margin-right: 20px;
+
+	}
+
+	.listcategories {
+		display: inline-block;
+		vertical-align: top;
+
+		border-left: 1px solid #eee;
+
+		text-align: left;
+
+		margin: 0px;
+		padding: 0px 0 0 0px;
+
+		width: 200px;
+		min-height: 200px;
+
+		ul {
+			margin: 0px;
+			padding: 0px;
+
+			li {
+				list-style: none;
+
+				margin: 0px;
+				padding: 0px;
+
+				a {
+					padding-left: 10px;
+
+					&:hover {
+						border-left: 3px solid #eee;
+					}
+				}
+
+				
+			}
+		}
+	}
+
+}
+
+#connectmodule {
+	display: block;
+	margin: 0px;
+	padding-top: 40px;
+
+
+	border-top: 1px solid #C6CCC0;
+	border-bottom: 1px solid #C6CCC0;
+
+	min-height: 200px;
+	width: 100%;
+	background-color: #EAF0E5;
+
+	.insideconnect {
+		width: 900px;
+		margin: 0 auto;
+		padding: 20px;
+
+		background-color: #fff;
+		opacity: 0.5;
+
+		border-radius: 5px;
+	}
+}

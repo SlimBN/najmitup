@@ -9,6 +9,7 @@ gem 'sqlite3'
 
 #Uploader gem
 gem 'carrierwave'
+gem 'rmagick'
 
 gem 'redactor-rails', :git => 'git@github.com:SlimBN/Slim-Redactor.git'
 

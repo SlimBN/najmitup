@@ -11,19 +11,47 @@
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 
+<header>
+  <div class="logo">
+    <%= image_tag 'minilogoblanc.png' %>
+  </div>
+
+  <div class="menu">
+
+    <ul>
+      <li>Who are we?</li>
+      <li>Ask for Coaching</li>
+      <li>Ask Questions</li>
+      <li>Start a Project</li>
+    </ul>
+    
+  </div>
+
+  <div class="personal">
+
+    <% unless user_signed_in? %>
+      <%= link_to 'Sign In', "#login", :class => "openModal" %> <%= link_to 'Sign Up', "#register", :class => "openModal" %>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to current_user.username, user_path(current_user) %>
+    <% end %>
+    
+  </div>
+</header>
+
 
 <a id="simple-menu" href="#sidr"><%= image_tag 'icons/arrow.png', :class => 'toggle' %></a>
  
 <div id="sidr">
 
-  <div class="logo"><%= image_tag 'minilogoblanc.png' %></div>
+  <div class="logo"></div>
   <!-- User Box -->
   <div class="userbox">
     <% unless user_signed_in? %>
       <%= link_to 'Sign In', "#login", :class => "openModal" %> <%= link_to 'Sign Up', "#register", :class => "openModal" %>
     <% end %>
     <% if user_signed_in? %>
-      <%= link_to current_user.email, user_path(current_user) %>
+      <%= link_to current_user.username, user_path(current_user) %>
       <%= link_to (image_tag 'icons/idea.png', :size => '9x12')+' Add a Project', user_path(current_user) %>
     </br></br></br></br>
       <% if current_user.website? %>

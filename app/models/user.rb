@@ -7,13 +7,15 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :address, :biography, :birthday, :birthmonth, :birthyear, :cid, :country_id, :is_coach, :name, :phone, :slug, :state_id, :town, :username, :website
+  attr_accessible :address, :avatar, :biography, :birthday, :birthmonth, :birthyear, :cid, :country_id, :is_coach, :name, :phone, :slug, :state_id, :town, :username, :website
 
   has_many :questions, :foreign_key => :user_id, :dependent => :destroy
   has_many :answers, :foreign_key => :user_id, :dependent => :destroy
   
   extend FriendlyId
   friendly_id :name, use: :slugged
+
+  mount_uploader :avatar, AvatarUploader
 
   acts_as_taggable
   acts_as_taggable_on :skills, :interests

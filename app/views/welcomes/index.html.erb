@@ -1,11 +1,30 @@
-<header>
-  <% if user_signed_in? %>
-    <%= current_user.email %>
-  <% end %>
 
-  <% unless user_signed_in? %>
-    please <%= link_to "login", new_user_registration_path() %>
-  <% end %>
-</header>
+<% unless Question.order("created_at").last.nil? %>
+<div id="introquestionsmodule">
+  <div class="lastone">
+    <strong><%= Question.last.subject %></strong></br>
+    <%= raw(Question.last.question) %>
+  </div>
+  <div class="listcategories">
+    <ul>
+      <% Category.all.each do |category| %>
+      <li><%= link_to category.name, category_path(category) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<% end %>
 
-this is the home
+
+<% unless user_signed_in? %>
+<div id="connectmodule">
+	<div class="insideconnect">
+		<div class="normallogins">
+			normal
+		</div>
+		<div class="sociallogins">
+			social
+		</div>
+	</div>
+</div>
+<% end %>
