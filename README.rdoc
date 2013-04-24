@@ -2,11 +2,11 @@
 
 1 - add categories layouts
 
-2 - add answers
+2 - DONE add answers
 
 3 - set permissions
 
-4 - add quick answer
+4 - DONE add quick answer
 
 5 - configure carrierwave
 

@@ -1,19 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div id="thequestion">
+  <div class="theuser">
+    <%= @question.user.name %>
+  </div>
+  <div class="thesubject">
+    <%= @question.subject %>
+  </div>
+  <div class="question">
+    <%= @question.question %>
+  </div>
+</div>
 
-<p>
-  <b>Subject:</b>
-  <%= @question.subject %>
-</p>
 
-<p>
-  <b>Question:</b>
-  <%= @question.question %>
-</p>
 
-<p>
-  <b>Category:</b>
-  <%= @question.category_id %>
-</p>
+  <div id="answserslist">
+      <% Answer.where('question_id = ?', @question.id).each do |answer| %>
+      <div id="answer">
+        <div class="user">
+          <%= link_to answer.user.name, user_path(answer.user) %>
+        </div>
+        <div class="content">
+          <%= raw(answer.content) %>
+        </div>        
+      </div>
+      <% end %>
+  </div>
+
+<% if user_signed_in? %>
+
+  <%= form_for(Answer.new(params[:answer])) do |f| %>
+
+    <div class="field">
+      Quick Answer<br />
+      <%= f.text_area :content, :class => "redactor" %>
+    </div>
+
+      <%= f.hidden_field :question_id, :value => @question.id %>
+
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+<% end %>
 
 <p>
   <b>Status:</b>
@@ -30,15 +60,6 @@
   <%= @question.featured %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%= @question.user_id %>
-</p>
-
-<p>
-  <b>Slug:</b>
-  <%= @question.slug %>
-</p>
 
 
 <%= link_to 'Edit', edit_question_path(@question) %> |
