@@ -26,6 +26,8 @@
 
 13 - export file
 
+14 - before_filter
+
 == V2
 
 1 - Ajax the app

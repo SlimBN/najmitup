@@ -3,6 +3,8 @@ class Question < ActiveRecord::Base
 
   belongs_to :category
   belongs_to :user
+
+  has_many :answers, :foreign_key => :question_id, :dependent => :destroy
   
   extend FriendlyId
   friendly_id :subject, use: :slugged

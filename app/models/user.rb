@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   attr_accessible :address, :biography, :birthday, :birthmonth, :birthyear, :cid, :country_id, :is_coach, :name, :phone, :slug, :state_id, :town, :username, :website
 
   has_many :questions, :foreign_key => :user_id, :dependent => :destroy
+  has_many :answers, :foreign_key => :user_id, :dependent => :destroy
   
   extend FriendlyId
   friendly_id :name, use: :slugged

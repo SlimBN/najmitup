@@ -1,24 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div id="container">
+	
+	<div class="container-header">
+		<div class="category-label">
+			<%= @category.name %>
+		</div>
 
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
+		<div class="category-description">
+			<%= raw(@category.description) %>
+		</div>
+	</div>
 
-<p>
-  <b>Slug:</b>
-  <%= @category.slug %>
-</p>
+	<div id="questionslist">
+	  	<% Question.where('category_id = ?', @category.id).each do |question| %>
+	  	<div class="question">
+	    	<%= link_to question.user.name, user_path(question.user) %> asked <%= link_to question.subject, question_path(question) %>
+	  	</div>
+	  	<% end %>
+	</div>
+</div>
 
-<p>
-  <b>Description:</b>
-  <%= @category.description %>
-</p>
 
-<p>
-  <b>Parent:</b>
-  <%= @category.parent %>
-</p>
 
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
