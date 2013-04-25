@@ -199,9 +199,137 @@ header {
 		margin: 0 auto;
 		padding: 20px;
 
+		display: block;
+
 		background-color: #fff;
-		opacity: 0.5;
 
 		border-radius: 5px;
+		border: 1px solid #C6CCC0;
+
+		text-align: center;
+
+		.normallogins {
+			display: inline-block;
+			vertical-align: top;
+
+			text-align: left;
+
+			width: 400px;
+
+			.big {
+				font-size: 24px;
+				font-weight: bold;
+
+				margin-bottom: 20px;
+			}
+		}
+
+		.sociallogins {
+			display: inline-block;
+			vertical-align: middle;
+
+			padding-top: 20px;
+
+			text-align: center;
+
+			width: 400px;
+
+			.facebook {
+				background-color: #2D4486;
+
+				border-radius: 5px;
+
+				padding: 10px;
+				padding-left: 15px;
+				padding-right: 15px;
+
+				font-size: 24px;
+				font-weight: bold;
+				color: #fff;
+			}
+
+		}
+	}
+}
+
+#footer {
+	margin: 0px;
+	padding: 0px;
+	padding-top: 20px;
+
+	min-height: 200px;
+	width: 100%;
+
+	background-color: #121a0d;
+
+	color: #fff;
+	font-family: "Helvetica Neue",Helvetica,sans-serif;
+	font-size: 14px;
+
+	border-top: 2px dashed #75bb34;
+
+	.footercontainer {
+		width: 900px;
+		margin: 0 auto;
+		padding: 0px;
+
+		.sitemap {
+			width: 900px;
+			margin: 0 auto;
+			padding: 0px;
+		}
+
+		.sponsors {
+			width: 900px;
+
+			margin: 0 auto;
+			margin-top: 30px;
+			margin-bottom: 10px;
+			padding: 0px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+
+			border-top: 1px solid #222A1F;
+			border-bottom: 1px solid #222A1F;
+
+
+
+		}
+
+		.bottommenu {
+			width: 900px;
+			margin: 0 auto;
+			padding: 0px;
+
+			.bottomlogo {
+				width: 300px;
+				margin: 0px;
+				padding: 0px;
+
+				display: inline-block;
+
+			}
+
+			.bottomlinks {
+				margin: 0px;
+				padding: 0px;
+
+				text-align: right;
+
+				width: 550px;
+				display: inline-block;
+
+
+				ul {
+
+					li {
+						margin: 10px;
+						list-style: none;
+
+						display: inline-block;
+					}
+				}
+			}
+		}
 	}
 }
