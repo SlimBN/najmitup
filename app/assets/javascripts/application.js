@@ -15,3 +15,6 @@
 //= require redactor-rails
 //= require_tree .
 
+$(function(){
+   $('.carousel').carousel();
+});

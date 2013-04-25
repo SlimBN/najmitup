@@ -146,7 +146,7 @@ header {
 		display: inline-block;
 		vertical-align: top;
 
-		border-left: 1px solid #eee;
+		border-left: 1px solid #85c443;
 
 		text-align: left;
 
@@ -163,14 +163,23 @@ header {
 			li {
 				list-style: none;
 
+				font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-size: 16px;
+				line-height: 25px;
+
 				margin: 0px;
 				padding: 0px;
 
+
 				a {
 					padding-left: 10px;
+					text-decoration: none;
+					color: #000;
+
+				line-height: 25px;
 
 					&:hover {
-						border-left: 3px solid #eee;
+						border-left: 3px solid #85c443;
 					}
 				}
 
@@ -248,6 +257,34 @@ header {
 				color: #fff;
 			}
 
+		}
+	}
+}
+
+#explanationmodule {
+
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	background-image: url(image_path('backgrounds/facesbg.jpg'));
+
+	.insideexplanation {
+		width: 900px;
+		margin: 0 auto;
+
+		padding: 20px;
+
+		border-radius: 5px;
+
+		background-color: #85c443;
+		opacity: 0.9;
+
+		.big {
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+
+			margin-bottom: 24px;
 		}
 	}
 }
