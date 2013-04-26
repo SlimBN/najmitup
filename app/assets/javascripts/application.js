@@ -13,8 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require redactor-rails
+//= require jquery.backstretch
 //= require_tree .
 
 $(function(){
    $('.carousel').carousel();
+   $('.hero').carousel();
 });

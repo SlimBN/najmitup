@@ -11,6 +11,9 @@ gem 'sqlite3'
 gem 'carrierwave'
 gem 'rmagick'
 
+#adapting background image to the container
+gem 'backstretch-rails'
+
 gem 'redactor-rails', :git => 'git@github.com:SlimBN/Slim-Redactor.git'
 
 gem 'devise', :git => 'git@github.com:SlimBN/Slim-Auth.git'

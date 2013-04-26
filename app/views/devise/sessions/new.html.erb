@@ -1,17 +1,33 @@
-<h2>Sign in</h2>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+<div id="register" class="devise">
+  <div class="register">
+    <div class="explanation">
+      <p>One-click sign in if you've already connected your Facebook account, or quickly sign up for Twitch with Facebook</p>
+      <p>By clicking Sign Up, you are indicating that you have read and agree to the Terms of Service</p>
+    </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+ 
+      <div id="forminput">
+        <div class="label">Email</div>
+        <div class="input">
+          <%= f.email_field :email, :autofocus => true %>
+        </div>
+      </div>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+      <div id="forminput">
+        <div class="label">Password</div>
+        <div class="input">
+        	<%= f.password_field :password %>
+        </div>
+      </div>
 
-<%= render "devise/shared/links" %>
+
+
+      <input name="commit" type="submit" value="Sign In" class="inputbutton" /><%= f.check_box :remember_me %> Remember Me
+
+    <% end %>
+  </div>
+
+</div>

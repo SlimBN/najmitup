@@ -1,3 +1,31 @@
+<div id="heromodule">
+	<div id="hero" class="hero slide">
+	  <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+	  </ol>
+	  <!-- Carousel items -->
+	  <div class="carousel-inner">
+	    <div class="active item"></div>
+	    <div class="item">…</div>
+	    <div class="item">…</div>
+	  </div>
+	  <!-- Carousel nav -->
+	  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+</div>
+
+<script>
+  // Or, to start a slideshow, just pass in an array of images
+  $("#heromodule .hero .carousel-inner div").backstretch([
+    "backgrounds/hero1.jpg",
+    "backgrounds/hero1.jpg",
+    "backgrounds/hero1.jpg",  
+  ], {duration: 4000});
+</script>
+
 
 <% unless Question.order("created_at").last.nil? %>
 <div id="introquestionsmodule">
@@ -23,7 +51,7 @@
 			<div class="big">
 				Discover great projects with your friends!
 			</div>
-			You can use our form either to <%= link_to 'register', "#register", :class => "openModal" %> or to <%= link_to 'login', "#login", :class => "openModal" %>
+			You can use our form either to <%= link_to 'register', register_path() %> or to <%= link_to 'login', login_path() %>
 		</div>
 		<div class="sociallogins">
 			<a href="" class="facebook">Connect with Facebook</a>
@@ -38,8 +66,8 @@
 			Where answers come from
 		</div>
 		<div class="text">
-			Each and every Kickstarter project is the independent creation of someone like you. 
-Want to know more about how projects happen, or start your own?
+			Each answer put here is made by persons like, that have tried and came to find solutions about the same problems you're facing. 
+Want to know more about how projects happen, or start your own? Start gathering the knowledge here.
 		</div>
 	</div>
 </div>
