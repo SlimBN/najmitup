@@ -339,6 +339,7 @@ header {
 				margin: 0px;
 
 				display: inline-block;
+				vertical-align: top;
 
 				.big {
 
@@ -351,6 +352,10 @@ header {
 
 						li {
 							list-style: none;
+							
+							font-size: 12px;
+							font-weight: normal;
+							color: #A6AF9D;
 
 							margin: 0px;
 							padding: 0px;

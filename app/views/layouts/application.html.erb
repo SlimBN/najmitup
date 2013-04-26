@@ -87,64 +87,45 @@
 
       <div class="element">
         <div class="big">
-          Header
+          Discover
         </div>
         <div class="list">
           <ul>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
+            <% Category.all.each do |category| %>
+            <li><%= link_to category.name, category_path(category) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="element">
+        <div class="big">
+          Create
+        </div>
+        <div class="list">
+          <ul>
+            <li>A New Project</li>
+            <li>A Question</li>
+            <li>A Business Plan</li>
           </ul>
         </div>
       </div>
       
       <div class="element">
         <div class="big">
-          Header
+          Stay Connected
         </div>
         <div class="list">
           <ul>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Google+</li>
+            <li>Contact Us</li>
           </ul>
         </div>
       </div>
-      
-      <div class="element">
-        <div class="big">
-          Header
-        </div>
-        <div class="list">
-          <ul>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="element">
-        <div class="big">
-          Header
-        </div>
-        <div class="list">
-          <ul>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-            <li>list 1</li>
-          </ul>
-        </div>
-      </div>
-      
+
     </div>
 
     <div class="sponsors">

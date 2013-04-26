@@ -1,5 +1,8 @@
 Staritup::Application.routes.draw do
 
+  resources :startprojects
+
+
   resources :answers
 
 
