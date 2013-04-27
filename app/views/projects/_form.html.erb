@@ -14,7 +14,7 @@
   <% end %>
 
 
-<div id="myCarousel" class="carousel slide">
+<div id="stepbystep" class="carousel slide">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -37,31 +37,56 @@
       <div id="projectforms">
         
         <div class="questionscolumn">
+
           <div class="projectform">
-            <%= f.label :title %><br />
-            <%= f.text_field :title %>
+           <div class="label">Nom de votre projet</div>
+            <div class="form"><%= f.text_field :title %></div>
           </div>
+
+
+
           <div class="projectform">
-            <%= f.label :miniature %><br />
-            <%= f.text_field :miniature %>
+           <div class="label">Un graphique qui symbolisera votre projet</div>
+            <div class="form"><%= f.text_field :miniature %></div>
           </div>
+
+
+
           <div class="projectform">
-            <%= f.label :project_category_id %><br />
-            <%= f.number_field :project_category_id %>
+            <div class="label">Categorie</div>
+            <div class="form"><%= f.number_field :project_category_id %></div>
           </div>
+
+
+
           <div class="projectform">
-            <%= f.label :abstract %><br />
-            <%= f.text_area :abstract %>
+            <div class="label">Abstract</div>
+            <div class="form"><%= f.text_area :abstract, :rows => 5 %></div>
           </div>
+
+
           <div class="projectform">
-            <%= f.label :location_id %><br />
-            <%= f.number_field :location_id %>
+            <div class="label">Localisation</div>
+            <div class="form"><%= f.number_field :location_id %></div>
           </div>
+
+
         </div>
 
         <div class="sidesteps">
-          steps here
+
+          <div class="steps">
+            steps here
+          </div>
+          
+          <div class="stepscroller">
+            <a href="#stepbystep" data-slide="prev">Précédent</a>
+            <a href="#stepbystep" data-slide="next">Suivant</a>
+          </div>
+          
+
         </div>
+        
       </div>
 
 
@@ -79,28 +104,51 @@
     </div>
   </div>
 
-  <div class="field">
-    <%= f.label :video %><br />
-    <%= f.text_area :video %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :challenges %><br />
-    <%= f.text_area :challenges %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div id="projectforms">
+        
+        <div class="questionscolumn">
 
-</div>
+          <div class="projectform">
+            <div class="label">Lier une video à votre projet</div>
+            <div class="form"><%= f.text_area :video, :rows => "1" %></div>
+          </div>
+
+          <div class="projectform">
+            <div class="label">Description</div>
+            <div class="form"><%= f.text_area :description, :rows => "5" %></div>
+          </div>
+
+          <div class="projectform">
+            <div class="label">Challenges</div>
+            <div class="form"><%= f.text_area :challenges, :rows => "5" %></div>
+          </div>
+
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+
+        </div>
+
+        <div class="sidesteps">
+
+          <div class="steps">
+            steps here
+          </div>
+          
+          <div class="stepscroller">
+            <a href="#stepbystep" data-slide="prev">Précédent</a>
+            <a href="#stepbystep" data-slide="next">Suivant</a>
+          </div>
+          
+
+        </div>
+        
+
+      </div>
+
+    </div>
 
   </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
 <% end %>
