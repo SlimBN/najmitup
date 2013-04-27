@@ -1,0 +1,63 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#projectssheader {
+	width: 100%;
+
+	padding-top: 40px;
+	padding-bottom: 20px;
+
+	text-align: center;
+
+	background-color: #EAF0E5;
+
+	.big {
+		font-weight: 600;
+		font-size: 28px;
+
+		margin-bottom: 10px;
+	}
+
+	.desc {
+		font-size: 18px;
+		color: #64685E;
+		font-weight: 100;
+	}
+}
+
+#projectforms {
+
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	.questionscolumn {
+		width: 600px;
+
+		border-right: 1px dotted #ccc;
+
+		display: inline-block;
+
+		.projectform {
+			background-color: #EAF0E5;
+
+			border-radius: 5px;
+
+			padding: 10px;
+			margin-bottom: 20px;
+
+		}
+	}
+
+	.sidesteps {
+		width: 280px;
+
+		display: inline-block;
+		vertical-align: top;
+	}	
+
+
+}

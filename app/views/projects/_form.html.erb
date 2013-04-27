@@ -1,0 +1,106 @@
+
+
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+
+      <div id="projectssheader">
+        <div class="big">
+          Meet your new project.
+        </div>
+
+        <div class="desc">
+          Start by giving it a name, a pic, and other important details.
+        </div>
+      </div>
+
+      <div id="projectforms">
+        
+        <div class="questionscolumn">
+          <div class="projectform">
+            <%= f.label :title %><br />
+            <%= f.text_field :title %>
+          </div>
+          <div class="projectform">
+            <%= f.label :miniature %><br />
+            <%= f.text_field :miniature %>
+          </div>
+          <div class="projectform">
+            <%= f.label :project_category_id %><br />
+            <%= f.number_field :project_category_id %>
+          </div>
+          <div class="projectform">
+            <%= f.label :abstract %><br />
+            <%= f.text_area :abstract %>
+          </div>
+          <div class="projectform">
+            <%= f.label :location_id %><br />
+            <%= f.number_field :location_id %>
+          </div>
+        </div>
+
+        <div class="sidesteps">
+          steps here
+        </div>
+      </div>
+
+
+</div>
+
+<div class="item">
+  
+  <div id="projectssheader">
+    <div class="big">
+      Meet your new project.
+    </div>
+
+    <div class="desc">
+      Start by giving it a name, a pic, and other important details.
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :video %><br />
+    <%= f.text_area :video %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :challenges %><br />
+    <%= f.text_area :challenges %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+</div>
+
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+<% end %>
