@@ -313,7 +313,7 @@ header {
 	background-color: #121a0d;
 
 	color: #fff;
-	font-family: "Helvetica Neue",Helvetica,sans-serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 14px;
 
 	border-top: 2px dashed #75bb34;
@@ -353,8 +353,9 @@ header {
 						li {
 							list-style: none;
 							
-							font-size: 12px;
-							font-weight: normal;
+							font-size: 14px;
+							font-weight: 200;
+							font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 							color: #A6AF9D;
 
 							margin: 0px;

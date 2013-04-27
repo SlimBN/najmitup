@@ -1,0 +1,43 @@
+<div id="guidelinesheader">
+  <div class="big">
+    Kickstarter is a funding platform for creative projects.
+  </div>
+  <div class="desc">
+    Those are it's guidelines
+  </div>
+</div>
+
+<div id="guidelinestable">
+  
+
+    
+    <% @guidelines.each do |guideline| %>
+    <div class="guideline">
+      
+      <div class="title">
+        <%= guideline.title %>
+      </div>
+
+      <div class="content">
+        <%= guideline.content %>
+      </div>
+
+    </div>
+    <% end %>
+
+</div>
+
+<div id="acceptance">
+  
+  <div class="subtext">
+    
+    I understand that in order to launch, my project must meet the Project Guidelines and I must meet eligibility requirements.
+    
+  </div>
+
+  <div class="accept">
+    
+    <%= link_to 'Demarrer votre projet', "" %>
+
+  </div>
+</div>

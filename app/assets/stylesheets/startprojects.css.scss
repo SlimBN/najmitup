@@ -46,6 +46,17 @@
 	}
 }
 
+#youfuturestartshere {
+	width: 100%;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+}
+
 #yourprojects {
 	width: 900px;
 	margin: 0 auto;
@@ -140,7 +151,11 @@
 	.column {
 		width: 296px;
 
+		padding-left: 6px;
+		padding-right: 6px;
+
 		text-align: left;
+
 
 		display: inline-block;
 
