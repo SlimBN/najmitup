@@ -1,6 +1,6 @@
 
 
-<%= form_for(@project) do |f| %>
+<%= form_for(@project, :html =>{:multipart => true }) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -13,6 +13,8 @@
     </div>
   <% end %>
 
+
+<%= f.hidden_field :user_id, :value => current_user.id %>
 
 <div id="stepbystep" class="carousel slide">
   <ol class="carousel-indicators">
@@ -46,8 +48,8 @@
 
 
           <div class="projectform">
-           <div class="label">Un graphique qui symbolisera votre projet</div>
-            <div class="form"><%= f.text_field :miniature %></div>
+           <div class="label">Une miniature de votre projet</div>
+            <div class="form"><%= f.file_field :miniature %></div>
           </div>
 
 
@@ -86,7 +88,7 @@
           
 
         </div>
-        
+
       </div>
 
 
@@ -96,11 +98,11 @@
   
   <div id="projectssheader">
     <div class="big">
-      Meet your new project.
+      It’s not just a project, it’s a story.
     </div>
 
     <div class="desc">
-      Start by giving it a name, a pic, and other important details.
+      Tell it with a video. It doesn’t have to be fancy, it just has to be you.
     </div>
   </div>
 

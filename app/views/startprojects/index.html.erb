@@ -26,50 +26,23 @@
   
   <div class="created">
     
+    <% Project.where("user_id = ?", current_user.id).each do |project| %>
     <div class="project">
       <div class="thumb">
-        <%= image_tag 'misc/noimage.png', :size => '180x125' %>
+        <%= image_tag project.miniature.to_s, :size => '180x125' %>
       </div>
 
       <div class="desc">
         <div class="link">
-          <%= link_to 'Mon projet', "" %>
+          <%= link_to project.title, project_path(project) %>
         </div>
         <div class="date">
-          10 jours avants
+          <%= time_ago_in_words(project.created_at) %>
         </div>
       </div>
     </div>
-    
-    <div class="project">
-      <div class="thumb">
-        <%= image_tag 'misc/noimage.png', :size => '180x125' %>
-      </div>
+    <% end %>
 
-      <div class="desc">
-        <div class="link">
-          <%= link_to 'Mon projet', "" %>
-        </div>
-        <div class="date">
-          10 jours avants
-        </div>
-      </div>
-    </div>
-    
-    <div class="project">
-      <div class="thumb">
-        <%= image_tag 'misc/noimage.png', :size => '180x125' %>
-      </div>
-
-      <div class="desc">
-        <div class="link">
-          <%= link_to 'Mon projet', "" %>
-        </div>
-        <div class="date">
-          10 jours avants
-        </div>
-      </div>
-    </div>
 
   </div>
 

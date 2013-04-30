@@ -11,12 +11,19 @@ gem 'sqlite3'
 gem 'carrierwave'
 gem 'rmagick'
 
+#certificate
+gem "certified"
+
 #adapting background image to the container
 gem 'backstretch-rails'
 
 gem 'redactor-rails', :git => 'git@github.com:SlimBN/Slim-Redactor.git'
 
-gem 'devise', :git => 'git@github.com:SlimBN/Slim-Auth.git'
+#authentification gems and modules
+#gem 'devise', :git => 'git@github.com:SlimBN/Slim-Auth.git'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 gem 'acts-as-taggable-on', :git => 'git@github.com:SlimBN/Slim-Taggit.git'
 

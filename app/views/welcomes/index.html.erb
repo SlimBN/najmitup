@@ -43,7 +43,6 @@
 </div>
 <% end %>
 
-
 <% unless user_signed_in? %>
 <div id="connectmodule">
 	<div class="insideconnect">
@@ -54,11 +53,34 @@
 			You can use our form either to <%= link_to 'register', register_path() %> or to <%= link_to 'login', login_path() %>
 		</div>
 		<div class="sociallogins">
-			<a href="" class="facebook">Connect with Facebook</a>
+			<%= link_to 'Connect with Facebook', "", :class => "facebook" %>
 		</div>
 	</div>
 </div>
 <% end %>
+
+
+
+<div id="lastprojectsmodule">
+	<div class="header">
+		<div class="left">
+			Last Projects
+		</div>
+
+		<div class="right">
+			<%= link_to "Discover All", "" %>
+		</div>
+	</div>
+
+	<div class="projects">
+		<div class="project">
+			
+		</div>
+	</div>
+</div>
+
+
+
 
 <div id="explanationmodule">
 	<div class="insideexplanation">

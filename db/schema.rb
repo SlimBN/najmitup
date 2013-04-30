@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130427094406) do
+ActiveRecord::Schema.define(:version => 20130430085001) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(:version => 20130427094406) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "locations", :force => true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.integer  "country_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.string   "slug"
@@ -57,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20130427094406) do
     t.integer  "project_category_id"
     t.text     "abstract"
     t.integer  "location_id"
+    t.integer  "user_id"
     t.text     "video"
     t.text     "description"
     t.text     "challenges"
@@ -147,6 +156,8 @@ ActiveRecord::Schema.define(:version => 20130427094406) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "avatar"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

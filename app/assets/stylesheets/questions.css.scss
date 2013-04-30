@@ -1,3 +1,176 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#questionshome {
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	.maincore {
+		width: 700px;
+
+		display: inline-block;
+
+		.tree {
+			width: 700px;
+
+			line-height: 30px;
+			font-size: 15px;
+			color: #666;
+			font-weight: 100;
+
+			vertical-align: middle;
+
+			border-bottom: 1px solid #C6CCC0;
+
+			a {
+				padding-left: 10px;
+
+				color: #666;
+
+				&:hover {
+					border-bottom: 1px dotted #C6CCC0;
+				}
+			}
+		}
+
+		.bigbox {
+			width: 700px;
+
+			margin-top: 20px;
+
+			.boxheader {
+				font-size: 40px;
+				font-weight: 100;
+				line-height: 70px;
+				color: #666;
+			}
+
+			.threadsbox {
+				width: 700px;
+
+				.thread {
+					width: 700px;
+
+					padding-top: 10px;
+					padding-bottom: 10px;
+
+					border-top: 1px solid #C6CCC0;
+
+					.icon {
+						display: inline-block;
+
+						width: 50px;
+
+						padding-right: 20px;
+						
+						img {
+							background-color: #3A89C4;
+						
+							border-radius: 50%;
+
+							padding: 20px 20px 20px 20px ;
+						}
+						
+
+					}
+
+					.text {
+						display: inline-block;
+						width: 500px;
+
+						vertical-align: middle;
+
+						.title {
+							font-weight: 300;
+							font-size: 20px;
+						}
+
+						.description {
+							font-weight: 100;
+						}
+					}
+
+					.count {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+
+	.sidebarcore {
+		width: 280px;
+
+		margin-left: 10px;
+
+		display: inline-block;
+		vertical-align: top;
+
+		.lastquestions {
+			background-color: #FAFAFA;
+			
+			border: 1px solid #E3E3E3;
+
+			padding-left: 10px;
+			padding-right: 10px;
+
+			.header {
+				line-height: 30px;
+				font-size: 15px;
+				color: #666;
+				font-weight: 300;
+
+				vertical-align: middle;
+
+				border-bottom: 1px solid #C6CCC0;
+			}
+
+			.questions {
+				font-size: 14px;
+				font-weight: 200;
+				letter-spacing: 2px;
+
+				.question {
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+
+
+#questionscategory {
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	.tree {
+			width: 1000px;
+
+			line-height: 30px;
+			font-size: 15px;
+			color: #666;
+			font-weight: 100;
+
+			vertical-align: middle;
+
+			border-bottom: 1px solid #C6CCC0;
+
+			a {
+				padding-left: 10px;
+
+				color: #666;
+
+				&:hover {
+					border-bottom: 1px dotted #C6CCC0;
+				}
+			}
+
+	}
+}

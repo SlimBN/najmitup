@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
+  before_filter :authenticate_user!
+  
   def index
     @projects = Project.all
 

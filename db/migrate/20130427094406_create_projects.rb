@@ -7,6 +7,7 @@ class CreateProjects < ActiveRecord::Migration
       t.integer :project_category_id
       t.text :abstract
       t.integer :location_id
+      t.integer :user_id
       t.text :video
       t.text :description
       t.text :challenges
