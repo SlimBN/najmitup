@@ -1,6 +1,5 @@
 Staritup::Application.routes.draw do
 
-
   resources :projects
 
 
@@ -23,7 +22,6 @@ Staritup::Application.routes.draw do
 
 
   mount RedactorRails::Engine => '/redactor_rails'
-
 
   devise_for :users do
     get "login", :to => "devise/sessions#new"

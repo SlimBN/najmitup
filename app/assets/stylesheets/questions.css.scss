@@ -40,6 +40,7 @@
 			width: 700px;
 
 			margin-top: 20px;
+			margin-bottom: 20px;
 
 			.boxheader {
 				font-size: 40px;
@@ -67,7 +68,7 @@
 						padding-right: 20px;
 						
 						img {
-							background-color: #3A89C4;
+							background-color: #15A877;
 						
 							border-radius: 50%;
 
@@ -86,6 +87,11 @@
 						.title {
 							font-weight: 300;
 							font-size: 20px;
+							
+							a {
+								color: #15A877;
+							}
+							
 						}
 
 						.description {
@@ -172,5 +178,125 @@
 				}
 			}
 
+	}
+
+	.header {
+		font-size: 40px;
+		font-weight: 100;
+		line-height: 70px;
+		color: #666;
+	}
+
+	.questionstable {
+		width: 1000px;
+
+		.tableheader {
+			width: 1000px;
+
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+
+			border-radius: 5px;
+
+			background-color: #15A877;
+
+			text-align: center;
+			color: #fff;
+			font-weight: 100;
+			font-size: 14px;
+
+			.question {
+				width: 600px;
+
+				display: inline-block;
+			}
+
+			.replies {
+				width: 150px;
+
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.byanddate {
+				width: 200px;
+
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+
+
+		.questions {
+			width: 1000px;
+
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+
+			border-radius: 5px;
+
+			text-align: center;
+			color: #fff;
+			font-weight: 200;
+			font-size: 16px;
+
+			.question {
+				width: 1000px;
+
+				padding-bottom: 10px;
+
+				.content {
+					width: 600px;
+
+					text-align: left;
+
+					display: inline-block;
+				}
+
+				.replies {
+					width: 150px;
+
+					color: #000;
+
+					display: inline-block;
+					vertical-align: top;
+				}
+
+				.byanddate {
+					width: 200px;
+
+					display: inline-block;
+					vertical-align: top;
+				}
+			}
+
+		}
+
+	}
+}
+
+
+
+#showquestion {
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 20px;
+
+	.thequestion {
+		width: 900px;
+
+		.topquestion {
+			background-color: #DF3B3D;
+
+			font-size: 16px;
+			font-weight: 700;
+			color: #A02B2F;
+
+			border: 1px solid #A02B2F;
+
+			padding: 20px;
+		}
 	}
 }

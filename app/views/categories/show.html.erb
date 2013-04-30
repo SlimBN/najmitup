@@ -1,31 +1,49 @@
 <div id="questionscategory">
 
 
-    <div class="tree">
+    <!--<div class="tree">
     	<a href="">Home</a>
-    </div>
+    </div>-->
 	
-	<div class="container-header">
-		<div class="category-label">
-			<%= @category.name %>
-		</div>
-
-		<div class="category-description">
-			<%= raw(@category.description) %>
-		</div>
+	<div class="header">
+		<%= @category.name %>
 	</div>
 
-	<div id="questionslist">
-	  	<% Question.where('category_id = ?', @category.id).each do |question| %>
-	  	<div class="question">
-	    	<%= link_to question.user.name, user_path(question.user) %> asked <%= link_to question.subject, question_path(question) %>
-	  	</div>
-	  	<% end %>
+	<div class="questionstable">
+		<div class="tableheader">
+			<div class="question">
+				Question
+			</div>
+
+			<div class="replies">
+				Number of Replies
+			</div>
+
+			<div class="byanddate">
+				Asked
+			</div>
+		</div>
+
+		<div class="questions">
+
+			<% Question.where('category_id = ?', @category.id).each do |question| %>
+			<div class="question">
+				<div class="content">
+					<%= link_to question.subject, question_path(question) %>
+				</div>
+
+				<div class="replies">
+					2
+				</div>
+
+				<div class="byanddate">
+					by <%= link_to question.user.username, user_path(question.user) %>
+				</div>
+			</div>
+	  		<% end %>
+			
+		</div>
+
 	</div>
 </div>
 
-
-
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>

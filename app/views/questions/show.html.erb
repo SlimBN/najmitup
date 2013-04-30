@@ -1,14 +1,34 @@
-<div id="thequestion">
-  <div class="theuser">
-    <%= @question.user.name %>
+<div id="showquestion">
+  
+  <div class="thequestion">
+    <div class="topquestion">
+      <%= @question.created_at %>
+    </div>
+
+    <div class="theuser">
+      <%= @question.user.name %>
+
+      <% if @question.user.avatar.nil? %>
+        <%= image_tag "misc/noimage.png" %>
+      <% end %>
+
+      <% unless @question.user.avatar.nil? %>
+        <%= image_tag @question.user.avatar.to_s, :size => "70x70" %>
+      <% end %>
+    </div>
+
+    <div class="thesubject">
+      <%= @question.subject %>
+    </div>
+
+    <div class="question">
+      <%= @question.question %>
+    </div>
+
   </div>
-  <div class="thesubject">
-    <%= @question.subject %>
-  </div>
-  <div class="question">
-    <%= @question.question %>
-  </div>
+
 </div>
+
 
 
 
