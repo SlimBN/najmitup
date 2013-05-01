@@ -62,15 +62,15 @@ ActiveRecord::Schema.define(:version => 20130430085001) do
     t.string   "title"
     t.string   "slug"
     t.string   "miniature"
-    t.integer  "project_category_id"
+    t.integer  "category_id"
     t.text     "abstract"
     t.integer  "location_id"
     t.integer  "user_id"
     t.text     "video"
     t.text     "description"
     t.text     "challenges"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "questions", :force => true do |t|

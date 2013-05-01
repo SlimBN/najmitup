@@ -348,7 +348,7 @@ header {
 				text-align: center;
 
 				border: 1px solid #C6CCC0;
-				border-radius: 5px;
+				border-radius: 5px 5px 0px 0px;
 
 				.image {
 					margin-top: 5px;
@@ -408,6 +408,44 @@ header {
 					font-style: italic;
 				}
 
+				.location {
+					text-align: left;
+
+					width: 190px;
+
+					padding-left: 5px;
+					padding-right: 8px;
+					margin-top: 5px;
+					margin-bottom: 5px;
+
+					font-weight: 100;
+					font-size: 14px;
+					line-height: 14px;
+					color: #858980;	
+
+					img {
+						vertical-align: middle;
+
+						height: 18px;
+						width: auto;
+
+						margin-right: 10px;
+					}			
+				}
+
+			}
+
+			.projectstats {
+				width: 200px;
+
+				background-color: #F4F4F4;
+
+				margin: 0px;
+
+				text-align: center;
+
+				border: 1px solid #C6CCC0;
+				border-radius: 0px 0px 5px 5px;
 			}
 		}
 	}

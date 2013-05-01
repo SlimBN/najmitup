@@ -56,7 +56,13 @@
 
           <div class="projectform">
             <div class="label">Categorie</div>
-            <div class="form"><%= f.number_field :project_category_id %></div>
+            <div class="form">
+              <select id="project_category_id" name="project[category_id]">
+                <% Category.all.each do |category|  %>
+                <option value="<%= category.id %>"><%= category.name %> </option>
+                <% end %>
+              </select>
+            </div>
           </div>
 
 
@@ -69,7 +75,13 @@
 
           <div class="projectform">
             <div class="label">Localisation</div>
-            <div class="form"><%= f.number_field :location_id %></div>
+            <div class="form">
+              <select id="project_location_id" name="project[location_id]">
+                <% Location.all.each do |location|  %>
+                <option value="<%= location.id %>"><%= location.name %> </option>
+                <% end %>
+              </select>
+            </div>
           </div>
 
 

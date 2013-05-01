@@ -24,7 +24,7 @@ Question.create ([{ :subject => "How do designers at Twitter, Facebook, and othe
 
 
 
-Location.create ([{ :name => "Ariana", :name => "Ariana", :slug => "ariana", :country_id => 1},
+Location.create ([{ :name => "Ariana", :slug => "ariana", :country_id => 1},
 				{ :name => "Beja", :slug => "beja", :country_id => 1},
 				{ :name => "Ben Arous", :slug => "ben-arous", :country_id => 1},
 				{ :name => "Bizerte", :slug => "bizerte", :country_id => 1},
@@ -48,3 +48,4 @@ Location.create ([{ :name => "Ariana", :name => "Ariana", :slug => "ariana", :co
 				{ :name => "Tozeur", :slug => "tozeur", :country_id => 1},
 				{ :name => "Tunis", :slug => "tunis", :country_id => 1},
 				{ :name => "Zaghouan", :slug => "zaghouan", :country_id => 1}])
+

@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title
       t.string :slug
       t.string :miniature
-      t.integer :project_category_id
+      t.integer :category_id
       t.text :abstract
       t.integer :location_id
       t.integer :user_id

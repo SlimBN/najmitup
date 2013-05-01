@@ -26,10 +26,11 @@
   <div class="menu">
 
     <ul>
-      <li><%= link_to 'Who are we?', 'presentation' %></li>
-      <!-- <li><%= link_to "Ask for Coaching", categories_path() %></li>-->
-      <li><%= link_to "Ask Questions", questions_path() %></li>
-      <li><%= link_to "Start a Project", startprojects_path() %></li>
+      <!-- <li><%= link_to 'Who are we?', 'presentation' %></li>
+      <li><%= link_to "Ask for Coaching", categories_path() %></li>-->
+      <li><%= link_to "Poser des Questions", questions_path() %></li>
+      <li><%= link_to "Découvrir", projects_path() %></li>
+      <li><%= link_to "Lancer un Projet", startprojects_path() %></li>
       <li><input type="text" size="30"></li>
     </ul>
     
@@ -39,13 +40,13 @@
 
     <ul>
       <% unless user_signed_in? %>
-      <li><%= link_to 'Sign In', login_path() %></li>
-      <li><%= link_to 'Sign Up', register_path() %></li>
+      <li><%= link_to 'Se Connecter', login_path() %></li>
+      <li><%= link_to "S'enregistrer", register_path() %></li>
       <% end %>
 
       <% if user_signed_in? %>
       <li><%= link_to current_user.username, user_path(current_user) %></li>
-      <li><%= link_to "Logout", logout_path() %></li>
+      <li><%= link_to "Se Deconnecter", logout_path() %></li>
       <% end %>
     </ul>
 
@@ -53,39 +54,6 @@
 </header>
 
 
-<!-- <a id="simple-menu" href="#sidr"><%= image_tag 'icons/arrow.png', :class => 'toggle' %></a>
- 
-<div id="sidr">
-
-  <div class="logo"><%= image_tag 'minilogoblanc.png' %></div>
-  <div class="userbox">
-    <% unless user_signed_in? %>
-      <%= link_to 'Sign In', "#login", :class => "openModal" %> <%= link_to 'Sign Up', "#register", :class => "openModal" %>
-    <% end %>
-    <% if user_signed_in? %>
-      <%= link_to current_user.username, user_path(current_user) %>
-      <%= link_to (image_tag 'icons/idea.png', :size => '9x12')+' Add a Project', user_path(current_user) %>
-    </br></br></br></br>
-      <% if current_user.website? %>
-        <%= link_to (image_tag 'icons/web.png', :size => '12x12'), 'http://'+current_user.website %>
-      <% end %>
-    <% end %>
-  </div>
- 
-
-  <ul>
-    <li class="active"><a href="#">List 1</a></li>
-    <li class="active"><a href="#"><%= image_tag 'icons/brain.png', :size => '14x14' %> Trouver des réponses</a></li>
-    <% Category.all.each do |category| %>
-    <li><a href="#"><%= category.name %></a></li>
-    <% end %>
-    <li class="active"><a href="#">List 2</a></li>
-    <li><a href="#">List 3</a></li>
-  </ul>
-
-
-</div>
- -->
 <%= yield %>
 
 
