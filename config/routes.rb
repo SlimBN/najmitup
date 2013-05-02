@@ -1,5 +1,8 @@
 Staritup::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   resources :projects
 
 
@@ -24,6 +27,7 @@ Staritup::Application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
 
   devise_for :users do
+  ActiveAdmin.routes(self)
     get "login", :to => "devise/sessions#new"
     get "logout", :to => "devise/sessions#destroy"
     get "register", :to => "devise/registrations#new"

@@ -446,6 +446,66 @@ header {
 
 				border: 1px solid #C6CCC0;
 				border-radius: 0px 0px 5px 5px;
+
+				.progressbar {
+					width: 190px;
+					height: 7px;
+
+					position: relative;
+
+					margin-top: 5px;
+					margin-bottom: 5px;
+					margin-left: 5px;
+					padding: 0px 0px 0px 0px;
+
+					text-align: left;
+
+					border-radius: 5px;
+
+					background-color: #C6CCC0;
+
+					.fill {
+						position: absolute;
+						top: 0;
+						left: 0;
+
+						border-radius: 5px;
+
+						height: 100%;
+						width: 76%;
+
+						background-color: #66C62F;
+					}
+				}
+
+				.percentages {
+					width: 190px;
+
+					.percentage {
+						display: inline-block;
+
+						width: 90px;
+
+						margin-left: 2px;
+
+						text-align: left;
+
+						.number {
+							margin-left: 4px;
+
+							font-size: 16px;
+							font-weight: 700;
+						}
+
+						.label {
+							font-weight: 100;
+							color: #858980;
+							
+							background-color: transparent;
+							
+						}
+					}
+				}
 			}
 		}
 	}
