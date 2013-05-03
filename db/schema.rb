@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503193915) do
+ActiveRecord::Schema.define(:version => 20130503222328) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
@@ -130,6 +130,11 @@ ActiveRecord::Schema.define(:version => 20130503193915) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "terms", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

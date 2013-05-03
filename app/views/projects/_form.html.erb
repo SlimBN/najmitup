@@ -26,140 +26,14 @@
   <div class="carousel-inner">
     <div class="active item">
 
-      <div id="projectssheader">
-        <div class="big">
-          Meet your new project.
-        </div>
+      <%= render "projects/first_phase" %>
 
-        <div class="desc">
-          Start by giving it a name, a pic, and other important details.
-        </div>
-      </div>
-
-      <div id="projectforms">
-        
-        <div class="questionscolumn">
-
-          <div class="projectform">
-           <div class="label">Nom de votre projet</div>
-            <div class="form"><%= f.text_field :title %></div>
-          </div>
-
-
-
-          <div class="projectform">
-           <div class="label">Une miniature de votre projet</div>
-            <div class="form"><%= f.file_field :miniature %></div>
-          </div>
-
-
-
-          <div class="projectform">
-            <div class="label">Categorie</div>
-            <div class="form">
-              <select id="project_category_id" name="project[category_id]">
-                <% Category.all.each do |category|  %>
-                <option value="<%= category.id %>"><%= category.name %> </option>
-                <% end %>
-              </select>
-            </div>
-          </div>
-
-
-
-          <div class="projectform">
-            <div class="label">Abstract</div>
-            <div class="form"><%= f.text_area :abstract, :rows => 5 %></div>
-          </div>
-
-
-          <div class="projectform">
-            <div class="label">Localisation</div>
-            <div class="form">
-              <select id="project_location_id" name="project[location_id]">
-                <% Location.all.each do |location|  %>
-                <option value="<%= location.id %>"><%= location.name %> </option>
-                <% end %>
-              </select>
-            </div>
-          </div>
-
-
-        </div>
-
-        <div class="sidesteps">
-
-          <div class="steps">
-            steps here
-          </div>
-          
-          <div class="stepscroller">
-            <a href="#stepbystep" data-slide="prev">Précédent</a>
-            <a href="#stepbystep" data-slide="next">Suivant</a>
-          </div>
-          
-
-        </div>
-
-      </div>
-
-
-</div>
-
-<div class="item">
-  
-  <div id="projectssheader">
-    <div class="big">
-      It’s not just a project, it’s a story.
     </div>
 
-    <div class="desc">
-      Tell it with a video. It doesn’t have to be fancy, it just has to be you.
-    </div>
-  </div>
-
-      <div id="projectforms">
-        
-        <div class="questionscolumn">
-
-          <div class="projectform">
-            <div class="label">Lier une video à votre projet</div>
-            <div class="form"><%= f.text_area :video, :rows => "1" %></div>
-          </div>
-
-          <div class="projectform">
-            <div class="label">Description</div>
-            <div class="form"><%= f.text_area :description, :rows => "5" %></div>
-          </div>
-
-          <div class="projectform">
-            <div class="label">Challenges</div>
-            <div class="form"><%= f.text_area :challenges, :rows => "5" %></div>
-          </div>
-
-          <div class="actions">
-            <%= f.submit %>
-          </div>
-
-        </div>
-
-        <div class="sidesteps">
-
-          <div class="steps">
-            steps here
-          </div>
-          
-          <div class="stepscroller">
-            <a href="#stepbystep" data-slide="prev">Précédent</a>
-            <a href="#stepbystep" data-slide="next">Suivant</a>
-          </div>
-          
-
-        </div>
-        
-
-      </div>
-
+    <div class="item">
+    
+      <%= render "projects/second_phase" %>
+    
     </div>
 
   </div>
