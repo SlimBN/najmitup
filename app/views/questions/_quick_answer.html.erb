@@ -1,20 +1,24 @@
 
 <% if user_signed_in? %>
 
-  <%= form_for(Answer.new(params[:answer])) do |f| %>
+	<div id="quickanswer">
 
-    <div class="field">
-      Quick Answer<br />
-      <%= f.text_area :content, :class => "redactor" %>
-    </div>
+	  <%= form_for(Answer.new(params[:answer])) do |f| %>
 
-      <%= f.hidden_field :question_id, :value => @question.id %>
+	    <div class="field">
+	      <%= f.text_area :content, :class => "redactor" %>
+	    </div>
 
-      <%= f.hidden_field :user_id, :value => current_user.id %>
+	      <%= f.hidden_field :question_id, :value => @question.id %>
 
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
+	      <%= f.hidden_field :user_id, :value => current_user.id %>
+
+	    <div class="actions">
+	      <input name="commit" type="submit" value="Repondre" />
+	    </div>
+	  <% end %>	
+
+	</div>
+
 
 <% end %>

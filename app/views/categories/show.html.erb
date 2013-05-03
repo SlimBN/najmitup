@@ -33,7 +33,7 @@
 				</div>
 
 				<div class="replies">
-					2
+					<%= Answer.where("question_id = ?", question.id).count %>
 				</div>
 
 				<div class="byanddate">
