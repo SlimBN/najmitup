@@ -1,0 +1,20 @@
+
+<% if user_signed_in? %>
+
+  <%= form_for(Answer.new(params[:answer])) do |f| %>
+
+    <div class="field">
+      Quick Answer<br />
+      <%= f.text_area :content, :class => "redactor" %>
+    </div>
+
+      <%= f.hidden_field :question_id, :value => @question.id %>
+
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+<% end %>

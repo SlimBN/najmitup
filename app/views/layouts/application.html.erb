@@ -8,138 +8,15 @@
 </head>
 <body>
 
-  <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=446791745405516";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
+<%= render "layouts/facebook_sdk" %>
 
-<header>
-  <div class="logo">
-    <%= link_to (image_tag "logo.png"), root_path() %>
-  </div>
-
-  <div class="menu">
-
-    <ul>
-      <!-- <li><%= link_to 'Who are we?', 'presentation' %></li>
-      <li><%= link_to "Ask for Coaching", categories_path() %></li>-->
-      <li><%= link_to "Poser des Questions", questions_path() %></li>
-      <li><%= link_to "Découvrir", projects_path() %></li>
-      <li><%= link_to "Lancer un Projet", startprojects_path() %></li>
-      <li><input type="text" size="30"></li>
-    </ul>
-    
-  </div>
-
-  <div class="personal">
-
-    <ul>
-      <% unless user_signed_in? %>
-      <li><%= link_to 'Se Connecter', login_path() %></li>
-      <li><%= link_to "S'enregistrer", register_path() %></li>
-      <% end %>
-
-      <% if user_signed_in? %>
-      <li><%= link_to current_user.username, user_path(current_user) %></li>
-      <li><%= link_to "Se Deconnecter", logout_path() %></li>
-      <% end %>
-    </ul>
-
-  </div>
-</header>
-
+<%= render "layouts/header" %>
 
 <%= yield %>
 
 
-<div id="footer">
-  <div class="footercontainer">
-
-    <div class="sitemap">
-
-      <div class="element">
-        <div class="big">
-          Discover
-        </div>
-        <div class="list">
-          <ul>
-            <% Category.all.each do |category| %>
-            <li><%= link_to category.name, category_path(category) %></li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-
-      
-      <div class="element">
-        <div class="big">
-          Create
-        </div>
-        <div class="list">
-          <ul>
-            <li>A New Project</li>
-            <li>A Question</li>
-            <li>A Business Plan</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="element">
-        <div class="big">
-          Stay Connected
-        </div>
-        <div class="list">
-          <ul>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Google+</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="sponsors">
-
-      <div id="myCarousel" class="carousel slide">
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <div class="active item">…</div>
-          <div class="item">…</div>
-          <div class="item">…</div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="bottommenu">
-      <div class="bottomlogo">
-        Staritup
-      </div>
-
-      <div class="bottomlinks">
-        <ul>
-          <li>Help</li>
-          <li>Contact</li>
-          <li>Privacy Policy</li>
-          <li>© 2013 MBreath, Inc</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
- 
-<script>
-$(document).ready(function() {
-  $('#simple-menu').sidr();
-});
-</script>
+<%= render "layouts/footer" %>
 
 </body>
 </html>

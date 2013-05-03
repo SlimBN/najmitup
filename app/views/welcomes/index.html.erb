@@ -1,138 +1,14 @@
-<div id="heromodule">
-	<div id="hero" class="hero slide">
-	  <!-- Carousel items -->
-	  <div class="carousel-inner">
-	    <div class="active item"><%= image_tag "backgrounds/hero1.jpg" %> </div>
-	    <div class="item"><%= image_tag "backgrounds/hero3.jpg" %> </div>
-	    <div class="item"><%= image_tag "backgrounds/hero2.jpg" %> </div>
-	  </div>
-	  <!-- Carousel nav -->
-	  <a class="carousel-control left" href="#hero" data-slide="prev">&lsaquo;</a>
-	  <a class="carousel-control right" href="#hero" data-slide="next">&rsaquo;</a>
-	</div>
-</div>
+<%= render "welcomes/hero_module" %>
 
 
-
-<% unless Question.order("created_at").last.nil? %>
-<div id="introquestionsmodule">
-  <div class="lastone">
-    <strong><%= Question.last.subject %></strong></br>
-    <%= raw(Question.last.question) %>
-  </div>
-  <div class="listcategories">
-    <ul>
-      <% Category.all.each do |category| %>
-      <li><%= link_to category.name, category_path(category) %></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-<% end %>
-
-<% unless user_signed_in? %>
-<div id="connectmodule">
-	<div class="insideconnect">
-		<div class="normallogins">
-			<div class="big">
-				Discover great projects with your friends!
-			</div>
-			You can use our form either to <%= link_to 'register', register_path() %> or to <%= link_to 'login', login_path() %>
-		</div>
-		<div class="sociallogins">
-			<%= link_to 'Connect with Facebook', "", :class => "facebook" %>
-		</div>
-	</div>
-</div>
-<% end %>
+<%= render "welcomes/last_questions_module" %>
 
 
-
-<div id="lastprojectsmodule">
-	<div class="header">
-		<div class="left">
-			<%= image_tag "icons/startup.png" %> Derniers Projets Ajoutés
-		</div>
-
-		<div class="right">
-			<%= link_to "Découvrir le tout", projects_path(	) %>
-		</div>
-	</div>
-
-	<div class="projectsbox">
-
-		<% Project.order("created_at").last(4).each do |project| %>
-		<div class="projectbox">
-			<div class="project">
-				<div class="image">
-					<%= image_tag project.miniature.to_s %>
-				</div>
-
-				<div class="title">
-					<%= project.title %>
-				</div>
-
-				<div class="founder">
-					par <%= link_to project.user.name, user_path(project.user) %>
-				</div>
-				
-				<div class="abstract">
-					<%= project.abstract %>
-				</div>
-
-				<div class="location">
-					<%= image_tag "icons/location.png" %><%= project.location.name %>, Tunisie
-				</div>
-				
-			</div>
-			<div class="projectstats">
-				<div class="progressbar">
-					&nbsp;
-
-					<div class="fill">
-						
-					</div>
-				</div>
-
-				<div class="percentages">
-					<div class="percentage">
-						<div class="number">
-							98%
-						</div>
-
-						<div class="label">
-							Investis
-						</div>
-					</div>
-					<div class="percentage">
-						<div class="number">
-							2304
-						</div>
-
-						<div class="label">
-							Dinars
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<% end %>
-
-	</div>
-</div>
+<%= render "welcomes/connect_module.html.erb" %>
 
 
+<%= render "welcomes/last_projects_module" %>
 
 
-<div id="explanationmodule">
-	<div class="insideexplanation">
-		<div class="big">
-			Where answers come from
-		</div>
-		<div class="text">
-			Each answer put here is made by persons like, that have tried and came to find solutions about the same problems you're facing. 
-Want to know more about how projects happen, or start your own? Start gathering the knowledge here.
-		</div>
-	</div>
-</div>
+<%= render "welcomes/explanation_module" %>
+

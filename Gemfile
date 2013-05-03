@@ -30,7 +30,7 @@ gem 'omniauth-facebook'
 
 gem 'acts-as-taggable-on', :git => 'git@github.com:SlimBN/Slim-Taggit.git'
 
-gem 'activeadmin', :git => 'git@github.com:SlimBN/Slim-Admin.git'
+#gem 'activeadmin', :git => 'git@github.com:SlimBN/Slim-Admin.git'
 
 gem 'friendly_id', :git => 'git@github.com:SlimBN/Slim-FriendlyUrl.git'
 
