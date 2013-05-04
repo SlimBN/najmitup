@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :questions, :foreign_key => :user_id, :dependent => :destroy
   has_many :answers, :foreign_key => :user_id, :dependent => :destroy
   has_many :projects, :foreign_key => :user_id, :dependent => :destroy
+  has_many :backers, :foreign_key => :user_id, :dependent => :destroy
   
   extend FriendlyId
   friendly_id :name, use: :slugged

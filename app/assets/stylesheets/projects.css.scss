@@ -213,6 +213,12 @@
 					list-style: none;
 
 					display: inline-block;
+
+					font-weight: bold;
+					font-size: 18px;
+					color: #333;
+
+					opacity: 0.5;
 				}
 			}
 		}
@@ -230,6 +236,12 @@
 					list-style: none;
 
 					display: inline-block;
+
+					font-weight: bold;
+					font-size: 18px;
+					color: #333;
+
+					opacity: 0.5;
 				}
 			}
 
@@ -316,6 +328,33 @@
 					}
 				}
 
+				.fundthis {
+					width: 310px;
+
+					input {
+						width: 300px;
+					}
+
+					.actions {
+
+						input {
+							background-color: #66C62F;
+
+							border-radius: 5px;
+							border: 0px;
+
+							color: #fff;
+							font-weight: 700;
+
+							padding: 15px;
+							padding-left: 20px;
+							padding-right: 20px;
+							margin-top: 10px;
+							margin-bottom: 20px;						
+						}
+					}
+				}
+
 				a {
 					background-color: #66C62F;
 
@@ -365,7 +404,7 @@
 				.line {
 					margin-top: 10px;
 					padding-top: 10px;
-					
+
 					border-top: 1px dashed #666;
 				}
 			}

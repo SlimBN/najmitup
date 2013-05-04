@@ -5,8 +5,13 @@ class Project < ActiveRecord::Base
   belongs_to :location
   belongs_to :category
 
+
+  has_many :backers, :foreign_key => :project_id, :dependent => :destroy
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 
   mount_uploader :miniature, MiniatureUploader
+
+
 end

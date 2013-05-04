@@ -12,13 +12,13 @@
   <div class="pinfo">
     <div class="data">
       <ul>
-        <li><%= link_to "Investors", "" %></li>
+        <li><%= Backer.where("project_id = ?", @project.id).count %> Investisseurs</li>
       </ul>
     </div>
 
     <div class="info">
       <ul>
-        <li><%= @project.location.name %></li>
+        <li><%= @project.location.name %></li> &bull; 
         <li><%= @project.category.name %></li>
       </ul>
     </div>
@@ -29,6 +29,8 @@
     <div class="leftcolumn">
 
       <%= render "projects/video" %>
+
+      <%= render "projects/social" %>
 
       <%= render "projects/resume" %>
 

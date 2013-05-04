@@ -31,7 +31,7 @@
       
       <div class="element">
         <div class="big">
-          Stay Connected
+          Restez Connectés
         </div>
         <div class="list">
           <ul>
@@ -43,17 +43,26 @@
         </div>
       </div>
 
+      
+      <div class="element">
+        <div class="big">
+          Lisez
+        </div>
+        <div class="list">
+          <ul>
+            <li><%= link_to "Termes D'utilisation", terms_path() %></li>
+            <li><%= link_to "Contact", "mailto:contact@staritup.com" %></li>
+            <li><%= link_to "Politique de Confidencialité", policies_path() %></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
 
     <div class="sponsors">
 
-      <div id="myCarousel" class="carousel slide">
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <div class="active item">…</div>
-          <div class="item">…</div>
-          <div class="item">…</div>
-        </div>
+      <div id="footerpartners" class="carousel slide">
+        <%= image_tag "partners/globalnet.png" %>
       </div>
 
     </div>
@@ -65,9 +74,6 @@
 
       <div class="bottomlinks">
         <ul>
-          <li><%= link_to "Termes D'utilisation", terms_path() %></li>
-          <li><%= link_to "Contact", "mailto:contact@staritup.com" %></li>
-          <li><%= link_to "Politique de Confidencialité", policies_path() %></li>
           <li>© 2013 MBreath, Inc</li>
         </ul>
       </div>

@@ -44,7 +44,7 @@ class BackersController < ApplicationController
 
     respond_to do |format|
       if @backer.save
-        format.html { redirect_to @backer, notice: 'Backer was successfully created.' }
+        format.html { redirect_to project_url(@backer.project), notice: 'Fund was successfully sent.' }
         format.json { render json: @backer, status: :created, location: @backer }
       else
         format.html { render action: "new" }
