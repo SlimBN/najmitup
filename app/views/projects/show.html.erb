@@ -13,14 +13,13 @@
     <div class="data">
       <ul>
         <li><%= link_to "Investors", "" %></li>
-        <li><%= link_to "Comments", "" %></li>
       </ul>
     </div>
 
     <div class="info">
       <ul>
-        <li>Location</li>
-        <li>Category</li>
+        <li><%= @project.location.name %></li>
+        <li><%= @project.category.name %></li>
       </ul>
     </div>
   </div>
@@ -28,146 +27,24 @@
   <div class="projectbox">
     
     <div class="leftcolumn">
-      <iframe src="http://player.vimeo.com/video/<%= @project.video %>?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="600" height="381" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+      <%= render "projects/video" %>
+
+      <%= render "projects/resume" %>
+
+      <%= render "projects/presentation" %>
+
+
+      
     </div>
 
     <div class="rightcolumn">
 
+      <%= render "projects/project_data" %>
 
-      <div class="fundbox">
+      <%= render "projects/creator" %>
 
-        <div class="data">
-          <div class="chiffre">
-            3
-          </div>
-          <div class="label">
-            backers
-          </div>
-        </div>
-
-        <div class="data">
-          <div class="chiffre">
-            215 TN.D 
-          </div>
-          <div class="label">
-            pledged of 20,000 TN.D goal
-          </div>
-        </div>
-
-        <div class="data">
-          <div class="chiffre">
-            26
-          </div>
-          <div class="label">
-            days to go
-          </div>
-        </div>
-
-        <a href="">Fund This Project</a>
-
-        <div class="explanation">
-          This project will only be funded if at least $20,000 is pledged by Friday May 24, 10:58am EDT.
-        </div>
-
-      </div>
-
-
-      <div class="usercard">
-
-        <div class="general">
-          <div class="avatar">
-            
-          </div>
-          <div class="text">
-            Project by
-            <div class="big">
-              
-            </div>
-            
-            <a href="">Contact Me</a>
-          </div>
-        </div>
-
-        <div class="line">
-          
-        </div>
-
-        <div class="line">
-          
-        </div>
-
-        <div class="line">
-          
-        </div>
-
-        <a href="">See Full Bio</a>
-      </div>
     </div>
   </div>
 </div>
 
-
-
-<p id="notice"><%= notice %></p>
-
-
-<p>
-  <b>Title:</b>
-  <%= @project.title %>
-</p>
-
-<%= @project.user.name %>
-
-<p>
-  <b>Title:</b>
-  <%= image_tag @project.miniature_url.to_s %>
-</p>
-
-<p>
-  <b>Slug:</b>
-  <%= @project.slug %>
-</p>
-
-<p>
-  <b>Miniature:</b>
-  <%= @project.miniature %>
-</p>
-
-<p>
-  <b>Project category:</b>
-  <%= @project.category_id %>
-</p>
-
-<p>
-  <b>Abstract:</b>
-  <%= @project.abstract %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%= @project.location_id %>
-</p>
-
-<p>
-  <b>Video:</b>
-  <iframe src="http://player.vimeo.com/video/<%= @project.video %>?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="261" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-</p>
-
-<p>
-  <b>Video:</b>
-  <%= raw(@project.video) %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
-
-<p>
-  <b>Challenges:</b>
-  <%= @project.challenges %>
-</p>
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>

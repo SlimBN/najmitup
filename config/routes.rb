@@ -1,5 +1,8 @@
 Staritup::Application.routes.draw do
 
+  resources :backers
+
+
   resources :terms
 
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503222328) do
+ActiveRecord::Schema.define(:version => 20130504002920) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(:version => 20130503222328) do
     t.integer  "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "backers", :force => true do |t|
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.integer  "value"
+    t.datetime "confirmed_at"
+    t.boolean  "finished"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "businessplans", :force => true do |t|
@@ -74,8 +84,16 @@ ActiveRecord::Schema.define(:version => 20130503222328) do
     t.text     "video"
     t.text     "description"
     t.text     "challenges"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.text     "how_know"
+    t.string   "facebook_link"
+    t.string   "twitter_link"
+    t.boolean  "accepted"
+    t.text     "needs"
+    t.text     "rejected_for"
+    t.boolean  "featured"
+    t.integer  "somme"
   end
 
   create_table "questions", :force => true do |t|

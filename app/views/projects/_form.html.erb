@@ -17,11 +17,6 @@
 <%= f.hidden_field :user_id, :value => current_user.id %>
 
 <div id="stepbystep" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#stepbystep" data-slide-to="0" class="active"></li>
-    <li data-target="#stepbystep" data-slide-to="1"></li>
-    <li data-target="#stepbystep" data-slide-to="2"></li>
-  </ol>
   <!-- Carousel items -->
   <div class="carousel-inner">
     <div class="active item">
@@ -33,6 +28,12 @@
     <div class="item">
     
       <%= render "projects/second_phase" %>
+    
+    </div>
+
+    <div class="item">
+    
+      <%= render "projects/third_phase" %>
     
     </div>
 

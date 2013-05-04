@@ -2,36 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.categorytab {
-	width: 95%;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+#quickquestion {
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
 
-	padding: 0px;
+	text-align: center;
 
-	ul {
-		margin: 0px;
-		padding: 0px;
+	border-radius: 10px;
 
-		.active {
-				border-bottom: 3px solid rgba(0, 0, 0, 0.25);
-		}
+	background-color: #eee;
 
-		li {
-			list-style: none;
+	input {
+		width: 945px;
+	}
 
-			line-height: 31px;
+	.actions {
+		margin-top: 20px;
 
-			display: inline;
-			margin: 0px;
-			margin-top: 10px;
-			padding-right: 10px;
-			padding-left: 5px;
-			padding-bottom: 5px;
+		input {
+			width: 950px;
+			padding-top: 10px;
+			padding-bottom: 10px;
 
-			&:hover, .active {
-				border-bottom: 3px solid rgba(0, 0, 0, 0.25);
-			}
+			background-color: #1B9B64;
 
+			border-radius: 5px;
+			border: 0px;
+
+			color: #fff;
+			font-size: 20px;
+			font-weight: 100;
 		}
 	}
 }
